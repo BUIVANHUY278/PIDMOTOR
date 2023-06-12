@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>Điều khiển và giám sát động cơ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="./logo.png" alt="">
+        </div>
+        <header>
+            <h3>BỘ GIÁO DỤC VÀ ĐÀO TẠO</h3>
+           <h3 class="school">TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN</h3>
+            <h1>ĐỒ án tốt nghiệp đại học</h1>
+            <h4>NGÀNH: CÔNG NGHỆ KỸ THUẬT ĐIỆN - ĐIỆN TỬ</h4>
+            <h4>CHUYÊN NGÀNH: TỰ ĐỘNG HÓA CÔNG NGHIỆP</h4>
+            <h5>TÊN ĐỀ TÀI <br> LẬP TRÌNH ĐIỀU KHIỂN VÀ GIÁM SÁT TỐC ĐỘ MÁY MÀI QUA SÓNG WIFI</h5>
+        </header>
+
+        <div class="btn_control">
+            <button class="btn_pc" onclick="writeData(5000)">Tốc độ đặt 5000 vòng/phút</button>
+            <button class="btn_pc" onclick="writeData(6000)">Tốc độ đặt 6000 vòng/phút</button>
+            <button class="btn_pc" onclick="writeData(7000)">Tốc độ đặt 7000 vòng/phút</button>
+
+            <button class="btn_mobile" onclick="writeData(5000)">5000 RPM</button>
+            <button class="btn_mobile" onclick="writeData(6000)">6000 RPM</button>
+            <button class="btn_mobile" onclick="writeData(7000)">7000 RPM</button>
+        </div>
+
+        <div class="display">
+            <span>Tốc độ thực tế của máy mài: </span>
+            <p class="value_rpm"></p>
+        </div>
+
+        <div class="chart">
+            <canvas id="chart_rpm" width="1200" height="400"></canvas>
+        </div>
+
+        <div class="infor ">
+            <span class="icon">?</span>
+            <div class="menu">
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul>
+                    <li>
+                        <a href="./index.html">Trang chủ</a>
+                    </li>
+                    <li class="contact js_download">Download
+                        <ul class="sub_menu js_sub_download">
+                            <li>
+                                <a href="./PidMotorDC.apk" download="PidMotorDC.apk">APK</a>
+                            </li>
+                            <li>
+                                <a href="./install.rar" download="install.rar">EXE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="contact js_contact"> Liên hệ
+                        <ul class="sub_menu js_sub_contact">
+                            <li>
+                                <a href="mailto: buivanhuy011@gmail.com">Email: buivanhuy011@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="tel: 84365115221">SĐT: 0365115221</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="contact">
+                        <a href="https://docs.google.com/spreadsheets/d/1vkRQrmr_QIZtcmdHJd56KM4hEi7yz1sWPM110fF8pBo/edit#gid=0" target="_blank"> Lưu trữ</a>
+                    </li>
+                    <li class="contact">
+                        <a href="https://console.firebase.google.com/u/0/project/do-an-tot-nghiep-2023/database/do-an-tot-nghiep-2023-default-rtdb/data/~2F" target="_blank">FireBase</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="download">
+            <a href="./logo.png" download="logo.png">test</a>
+        </div> -->
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script src="./main.js"></script>
+
+</html>
